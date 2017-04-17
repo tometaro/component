@@ -1,0 +1,381 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.Header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 9999;
+  width: 100%;
+  transition: 1s ease-in-out; }
+  .Header-Inner {
+    margin: 0 auto;
+    width: 1000px;
+    position: relative; }
+  .Header-Title, .Header-Text {
+    color: #333;
+    transition: 1s ease-in-out; }
+  .Header-SpMenu {
+    background: #333; }
+  .Header-Bg {
+    background: rgba(51, 51, 51, 0.9);
+    transition: 1s ease-in-out; }
+    .Header-Bg .Header-Title,
+    .Header-Bg .Header-Text {
+      color: #FFF;
+      transition: 1s ease-in-out; }
+    .Header-Bg .Header-SpMenu {
+      background: #FFF; }
+
+@media only screen and (max-width: 768px) {
+  .Header, .Header-Inner {
+    width: 100%; }
+  .Header-Text {
+    color: #FFF; } }
+
+.Logo {
+  padding-left: 10px; }
+  .Logo-Icon, .Logo-Title {
+    display: inline-block; }
+  .Logo-Title {
+    font-size: 18px;
+    padding-left: 8px;
+    overflow: hidden;
+    line-height: 30px;
+    letter-spacing: 0.2em; }
+    .Logo-Title-White {
+      color: #FFF; }
+
+.Navi ul {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 13px;
+  letter-spacing: .3em;
+  line-height: 30px; }
+  .Navi ul li {
+    float: left;
+    position: relative; }
+    .Navi ul li a {
+      padding: 0 30px; }
+  .Navi ul li:hover {
+    opacity: 0.7; }
+
+.Navi-Toggle {
+  display: none;
+  position: absolute;
+  top: 6px;
+  right: 16px;
+  width: 18px;
+  height: 14px;
+  cursor: pointer;
+  z-index: 101; }
+  .Navi-Toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out; }
+  .Navi-Toggle span:nth-child(1) {
+    top: 0; }
+  .Navi-Toggle span:nth-child(2) {
+    top: 6px; }
+  .Navi-Toggle span:nth-child(3) {
+    bottom: 0; }
+
+@media only screen and (max-width: 768px) {
+  .Navi {
+    position: fixed;
+    transform: translateX(-800px);
+    transition-duration: 5.0s;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    .Navi ul {
+      list-style: none;
+      position: static;
+      right: 0;
+      bottom: 0;
+      transition-duration: 2.0s;
+      opacity: 0; }
+      .Navi ul li {
+        float: none;
+        position: static;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 16px 16px; }
+        .Navi ul li a {
+          padding: 0; }
+      .Navi ul li:after {
+        display: none; }
+    .Navi-Toggle {
+      display: block; }
+    .Navi-Open .Navi {
+      -webkit-overflow-scrolling: touch;
+      transform: translateX(0);
+      opacity: 1;
+      transition-duration: 0.5s;
+      z-index: 10; }
+    .Navi-Open span:nth-child(1) {
+      top: 6px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .Navi-Open span:nth-child(2) {
+      opacity: 0; }
+    .Navi-Open span:nth-child(3) {
+      bottom: 6px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .Navi-Open ul {
+      opacity: 1;
+      transition-duration: 4.0s; }
+    .Navi-Inner {
+      float: left;
+      width: 70%;
+      background: rgba(0, 0, 0, 0.7);
+      height: 100%; }
+    .Navi-Shadow {
+      float: right;
+      width: 30%;
+      background: transparent;
+      height: 100%; } }
+
+.Hero {
+  background: linear-gradient(-135deg, #eee, #ccc);
+  width: 100%;
+  color: #333;
+  padding-top: 71px; }
+  .Hero-Wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    height: 610px;
+    display: table; }
+  .Hero-Visual {
+    width: 50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .Hero-Visual img {
+      width: 50%; }
+  .Hero-Title {
+    text-align: center;
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .Hero-Title h1 {
+      font-size: 160px;
+      margin-bottom: 20px; }
+    .Hero-Title p {
+      letter-spacing: 0.5em;
+      font-size: 32px; }
+
+@media only screen and (max-width: 768px) {
+  .Hero {
+    padding: 50px 0; }
+    .Hero-Wrapper {
+      width: 100%;
+      height: auto; }
+    .Hero-Visual, .Hero-Title {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      float: none;
+      display: block; }
+      .Hero-Visual h1, .Hero-Title h1 {
+        font-size: 80px;
+        margin-bottom: 20px; }
+      .Hero-Visual p, .Hero-Title p {
+        letter-spacing: 0.5em;
+        font-size: 16px; } }
+
+.Section {
+  padding: 100px 0;
+  overflow: hidden;
+  background: #EEE; }
+  .Section:nth-child(even) {
+    background-color: #FFF; }
+  .Section-Wrapper {
+    width: 1000px;
+    margin: 0 auto; }
+  .Section-Text {
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    color: #888; }
+
+@media only screen and (max-width: 768px) {
+  .Section {
+    padding: 50px 15px; }
+    .Section-Wrapper {
+      width: 100%; }
+    .Section-Title {
+      font-size: 20px; }
+    .Section-Text {
+      font-size: 14px; } }
+
+.Footer {
+  width: 100%;
+  padding: 20px 0; }
+  .Footer-inner {
+    width: 1000px;
+    margin: 0 auto; }
+
+@media only screen and (max-width: 768px) {
+  .Footer, .Footer-Inner {
+    width: 100%; } }
+
+.ArticleList {
+  display: table;
+  margin: 0 auto;
+  height: auto;
+  vertical-align: middle;
+  text-align: center;
+  border: 0;
+  box-sizing: border-box; }
+  .ArticleList__Image {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    height: 200px;
+    width: 100%;
+    border-radius: 5px 5px 0 0; }
+  .ArticleList li {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    width: 300px;
+    height: auto;
+    min-height: 200px;
+    background: 0 0;
+    border-radius: 5px;
+    z-index: 0;
+    background: #FFF; }
+  .ArticleList header {
+    padding: 20px; }
+  .ArticleList h1 {
+    font-size: 12px;
+    line-height: 2; }
+  .ArticleList h2 {
+    font-size: 12px;
+    line-height: 2; }
+
+.Accordion dt, .Accordion dd {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: #FFF 1px solid; }
+
+.Accordion dt {
+  display: block;
+  background: #EEE;
+  cursor: pointer; }
+
+.Accordion dd {
+  background: #ddd;
+  display: none; }
+
+.Title-Section {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px; }
+
+.Title-center {
+  text-align: center; }
+
+.Carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden; }
+  .Carousel-Wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 4000px; }
+    .Carousel-Wrapper li {
+      float: left;
+      width: 1000px;
+      height: 100%;
+      display: inline; }
+  .Carousel-Prev, .Carousel-Next {
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    background: #EEE;
+    cursor: pointer;
+    display: table;
+    height: 100%; }
+    .Carousel-Prev i, .Carousel-Next i {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      color: #666; }
+  .Carousel-Prev {
+    left: 0; }
+  .Carousel-Next {
+    right: 0; }
+
+body {
+  font-family: "Rounded Mplus 1c", sans-serif;
+  background: #333;
+  text-decoration: none; }
+  body a {
+    text-decoration: none; }

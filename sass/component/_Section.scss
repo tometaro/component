@@ -1,0 +1,40 @@
+.Section {
+    padding: 100px 0;
+    overflow: hidden;
+    background: $color-whitegray;
+
+    &:nth-child(even){
+        background-color: $color-white;
+    }
+
+    &-Wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    &-Text {
+        font-size: 15px;
+        line-height: 1.7;
+        letter-spacing: 0.1em;
+        color: #888;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .Section {
+        padding: 50px 15px;
+
+        &-Wrapper {
+            width: 100%;
+        }
+
+        &-Title {
+            font-size: 20px;
+        }
+
+        &-Text {
+            font-size: 14px;
+        }
+    }
+}

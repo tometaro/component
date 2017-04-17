@@ -1,0 +1,50 @@
+.Carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+
+  &-Wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 4000px;
+
+    li {
+      float: left;
+      width: 1000px;
+      height: 100%;
+      display: inline;
+    }
+
+  }
+
+  &-Prev,
+  &-Next {
+    background-repeat: no-repeat;
+    height:100%;
+    position:absolute;
+    background: $color-whitegray;
+    cursor: pointer;
+    display: table;
+    height: 100%;
+
+    i{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: $color-gray;
+
+    }
+  }
+
+  &-Prev {
+    left: 0;
+  }
+
+  &-Next {
+    right: 0;
+  }
+
+}
+

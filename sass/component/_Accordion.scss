@@ -1,0 +1,20 @@
+.Accordion {
+    dt,dd {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-bottom: $color-white 1px solid;
+    }
+
+    dt {
+        display: block;
+        background: $color-whitegray;
+        cursor: pointer;
+    }
+
+    dd {
+        background: #ddd;
+        display: none;
+    }
+}
+

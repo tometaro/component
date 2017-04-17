@@ -1,0 +1,25 @@
+@import "variable";
+@import "component/reset";
+@import "component/Header";
+@import "component/Logo";
+@import "component/Navi";
+@import "component/Hero";
+@import "component/Section";
+@import "component/Footer";
+@import "component/ArticleList";
+@import "component/Accordion";
+@import "component/Title";
+@import "component/Carousel";
+
+
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
+
+body {
+    font-family: "Rounded Mplus 1c", sans-serif;
+    background: #333;
+    text-decoration: none;
+
+    a {
+        text-decoration: none;
+    }
+}

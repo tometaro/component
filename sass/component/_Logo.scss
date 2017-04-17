@@ -1,0 +1,21 @@
+.Logo {
+        padding-left: 10px;
+
+    &-Icon,
+    &-Title {
+        display: inline-block;
+    }
+
+    &-Title {
+        font-size: 18px;
+        padding-left: 8px;
+        overflow: hidden;
+        line-height: 30px;
+        letter-spacing: 0.2em;
+        &-White {
+            color: $color-white;
+
+        }
+    }
+
+}
