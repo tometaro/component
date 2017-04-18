@@ -1,30 +1,27 @@
 .Carousel {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+    width: 1000px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
 
-  &-Wrapper {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 4000px;
+    &-Wrapper {
+        position: absolute;
 
-    li {
-      float: left;
-      width: 1000px;
-      height: 100%;
-      display: inline;
+        li {
+        width: 1000px;
+        height: 250px;
+        border: 1px solid $color-whitegray;
+        box-sizing: border-box;
+        float: left;
+        }
     }
 
-  }
-
-  &-Prev,
-  &-Next {
+ &-Button {
     background-repeat: no-repeat;
     height:100%;
     position:absolute;
     background: $color-whitegray;
+    opacity: .7;
     cursor: pointer;
     display: table;
     height: 100%;
@@ -34,17 +31,16 @@
     text-align: center;
     vertical-align: middle;
     color: $color-gray;
+    font-size: 40px;
 
     }
-  }
 
-  &-Prev {
-    left: 0;
-  }
+    &-Prev {
+        left: 0;
+    }
 
-  &-Next {
-    right: 0;
+    &-Next {
+        right: 0;
+    }
   }
-
 }
-
