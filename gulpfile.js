@@ -25,6 +25,10 @@ gulp.task('sass', function () {
 
 //タスク監視
 gulp.task('default', ['browser-sync'], function () {
-  gulp.watch('./**/*.html', ['bs-reload']);
+  browserSync.init({
+    files: ['./**/*.php'],
+    proxy: 'http://tome.dev',
+  });
+  // gulp.watch('./**/*.php', ['bs-reload']);
   gulp.watch('./sass/**/*.scss', ['sass','bs-reload']);
 });
